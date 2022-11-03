@@ -14,3 +14,16 @@ huggingface-hub==0.10.0
 nvidia-ml-py3
 transformers==4.22.2
 transformers[sentencepiece]
+torchvision
+fairscale
+Pillow
+timm
+-e git+https://github.com/openai/CLIP.git@main#egg=clip
+-e git+https://github.com/pharmapsychotic/BLIP.git@main#egg=blip
+datasets
+flask
+flask_cors
+flask_expects_json
+requests
+gradio
+Flask-APScheduler
