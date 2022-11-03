@@ -1,0 +1,16 @@
+python-dotenv
+https://gradio-builds.s3.amazonaws.com/queue-disconnect/v3/gradio-3.4b2-py3-none-any.whl
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch
+diffusers
+transformers
+scipy
+ftfy
+diffusers==0.4.1
+nvidia-ml-py3
+wget
+huggingface_hub
+huggingface-hub==0.10.0
+nvidia-ml-py3
+transformers==4.22.2
+transformers[sentencepiece]
