@@ -12,7 +12,6 @@ wget
 huggingface_hub
 huggingface-hub==0.10.0
 nvidia-ml-py3
-
 transformers[sentencepiece]
 torchvision
 fairscale
