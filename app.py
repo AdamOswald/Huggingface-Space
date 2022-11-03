@@ -1,4 +1,14 @@
 #@title Prepare the Concepts Library to be used
+import sys
+sys.path.append('src/blip')
+sys.path.append('src/clip')
+import clip
+import hashlib
+import math
+import numpy as np
+import pickle
+import torchvision.transforms as T
+import torchvision.transforms.functional as TF
 import requests
 import wget
 import gradio as grad, random, re
@@ -20,6 +30,10 @@ from PIL import Image
 from datasets import load_dataset
 from share_btn import community_icon_html, loading_icon_html, share_js
 from io import BytesIO
+from models.blip import blip_decoder
+from torch import nn
+from torch.nn import functional as F
+from tqdm import tqdm
 #from torch import autocast
 #from diffusers import StableDiffusionPipeline
 #from io import BytesIO
