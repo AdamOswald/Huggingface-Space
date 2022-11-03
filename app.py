@@ -699,7 +699,7 @@ with block as demo:
                 waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning
               </p>
             </div>
-        """
+        """)
 
 with gr.Blocks(css=css) as demo:
     gr.HTML(
