@@ -3,14 +3,12 @@ import requests
 import wget
 import gradio as grad, random, re
 import gradio as gr
-#import torch
-#from torch import autocast
-#from diffusers import StableDiffusionPipeline
 import torch
 import os
 import utils
 import html
 import re
+import base64
 from torch import autocast
 from diffusers import StableDiffusionPipeline
 from transformers import pipeline, set_seed
@@ -20,10 +18,18 @@ from diffusers import AutoencoderKL, UNet2DConditionModel
 from diffusers import StableDiffusionImg2ImgPipeline 
 from PIL import Image
 from datasets import load_dataset
+from share_btn import community_icon_html, loading_icon_html, share_js
+from io import BytesIO
+#from torch import autocast
+#from diffusers import StableDiffusionPipeline
 #from io import BytesIO
 #import base64
+#import torch
 
 from share_btn import community_icon_html, loading_icon_html, share_js
+
+img_to_text = gr.Blocks.load(name="spaces/pharma/CLIP-Interrogator")
+stable_diffusion = gr.Blocks.load(name="spaces/stabilityai/stable-diffusion")
 
 is_colab = utils.is_google_colab()
 
@@ -423,6 +429,14 @@ def img_to_img(model_path, prompt, neg_prompt, img, strength, guidance, steps, w
         height = height,
         generator = generator)    
 
+def get_images(prompt):
+    gallery_dir = stable_diffusion(prompt, fn_index=2)
+    sd_output = [os.path.join(gallery_dir, image) for image in os.listdir(gallery_dir)]
+    return sd_output, gr.update(visible=True), gr.update(visible=True), gr.update(visible=True)
+
+def get_prompts(uploaded_image):
+    return img_to_text(uploaded_image, fn_index=1)[0]
+
 title = "Stable Diffusion Prompt Generator"
 description = 'This is a demo of the model series: "MagicPrompt", in this case, aimed at: "Stable Diffusion". To use it, simply submit your text or click on one of the examples. To learn more about the model, [click here](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion).<br>'
 
@@ -438,6 +452,34 @@ grad.Interface(fn=generate,
                theme="default").launch(enable_queue=True, debug=True)
 
 css = """
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#share-btn-container {
+    display: flex; padding-left: 0.5rem !important; padding-right: 0.5rem !important; background-color: #000000; justify-content: center; align-items: center; border-radius: 9999px !important; width: 13rem;
+}
+#share-btn {
+    all: initial; color: #ffffff;font-weight: 600; cursor:pointer; font-family: 'IBM Plex Sans', sans-serif; margin-left: 0.5rem !important; padding-top: 0.25rem !important; padding-bottom: 0.25rem !important;
+}
+#share-btn * {
+    all: unset;
+}
+#share-btn-container div:nth-child(-n+2){
+    width: auto !important;
+    min-height: 0px !important;
+}
+#share-btn-container .wrap {
+    display: none !important;
+}
+a {text-decoration-line: underline;}
   <style>
   .finetuned-diffusion-div {
       text-align: center;
@@ -1182,6 +1224,40 @@ The model is licensed with a <a href="https://huggingface.co/spaces/CompVis/stab
 Despite how impressive being able to turn text into image is, beware to the fact that this model may output content that reinforces or exacerbates societal biases, as well as realistic faces, pornography and violence. The model was trained on the <a href="https://laion.ai/blog/laion-5b/" style="text-decoration: underline;" target="_blank">LAION-5B dataset</a>, which scraped non-curated image-text-pairs from the internet (the exception being the removal of illegal content) and is meant for research purposes. You can read more in the <a href="https://huggingface.co/CompVis/stable-diffusion-v1-4" style="text-decoration: underline;" target="_blank">model card</a></p>
                </div>
            """)   
+
+     with gr.Row():
+       with gr.Column():
+           input_img = gr.Image(type="filepath", elem_id="input-img")
+           with gr.Row():
+             see_prompts = gr.Button("Feed in your image!")
+
+       with gr.Column():
+         img2text_output = gr.Textbox(
+                                 label="Generated text prompt", 
+                                 lines=4,
+                                 elem_id="translated"
+                             )
+         with gr.Row():
+             diffuse_btn = gr.Button(value="Diffuse it!")
+       with gr.Column(elem_id="generated-gallery"):
+         sd_output = gr.Gallery().style(grid=2, height="auto")
+         with gr.Group(elem_id="share-btn-container"):
+             community_icon = gr.HTML(community_icon_html, visible=False)
+             loading_icon = gr.HTML(loading_icon_html, visible=False)
+             share_button = gr.Button("Share to community", elem_id="share-btn", visible=False)
+
+     see_prompts.click(get_prompts, 
+                             inputs = input_img, 
+                             outputs = [
+                                 img2text_output
+                             ])
+     diffuse_btn.click(get_images, 
+                           inputs = [
+                               img2text_output
+                               ], 
+                           outputs = [sd_output, community_icon, loading_icon, share_button]
+                           )
+     share_button.click(None, [], [], _js=share_js)
 
 if not is_colab:
   demo.queue(concurrency_count=4)
