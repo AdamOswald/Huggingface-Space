@@ -57,7 +57,7 @@ from flask_apscheduler import APScheduler
 from jsonschema import ValidationError
 from os import mkdir
 from os.path import isdir
-from pathlib import Path
+from colorthief import ColorThief
 from data_measurements.dataset_statistics import DatasetStatisticsCacheClass as dmt_cls
 from utils import dataset_utils
 from utils import streamlit_utils as st_utils
