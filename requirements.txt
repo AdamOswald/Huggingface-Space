@@ -6,11 +6,9 @@ diffusers
 transformers
 scipy
 ftfy
-diffusers==0.4.1
 nvidia-ml-py3
 wget
 huggingface_hub
-huggingface-hub==0.10.0
 nvidia-ml-py3
 transformers[sentencepiece]
 torchvision
