@@ -6,6 +6,28 @@ node_modules
 .env
 .env.*
 !.env.example
+.vim
+.env
+target
+.idea
+Cargo.lock
+
+/data
+tokenizers/data
+bindings/python/tests/data
+docs/build/
+docs/make.bat
+
+__pycache__
+pip-wheel-metadata
+*.egg-info
+*.so
+/bindings/python/examples/.ipynb_checkpoints
+/bindings/python/build
+/bindings/python/dist
+
+.vscode
+*.code-workspace
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
