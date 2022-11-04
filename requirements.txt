@@ -45,3 +45,4 @@ tqdm
 pyarrow
 json2html
 matplotlib
+pyyaml
