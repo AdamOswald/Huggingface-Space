@@ -1038,9 +1038,9 @@ with gr.Blocks(css=css) as demo:
                 To train your own concepts and contribute to the library <a style="text-decoration: underline" href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/sd_textual_inversion_training.ipynb">check out this notebook</a>.
               </p>
             </div> ''')
-    with gr.Group():
-        with gr.Box():
-            with gr.Row().style(mobile_collapse=False, equal_height=True):
+ with gr.Group():
+     with gr.Box():
+         with gr.Row().style(mobile_collapse=False, equal_height=True):
 
                 text = gr.Textbox(
                     label="Enter your prompt", show_label=False, max_lines=1
