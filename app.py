@@ -23,6 +23,7 @@ import utils
 import html
 import re
 import base64
+import subprocess
 import argparse
 import logging
 import streamlit as st
@@ -69,6 +70,7 @@ from dataclasses import asdict
 
 from share_btn import community_icon_html, loading_icon_html, share_js
 
+subprocess.run(["make", "build-all"], shell=False)
 img_to_text = gr.Blocks.load(name="spaces/pharma/CLIP-Interrogator")
 stable_diffusion = gr.Blocks.load(name="spaces/stabilityai/stable-diffusion")
 
