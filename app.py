@@ -973,7 +973,7 @@ with gr.Blocks(css=css) as demo:
       
     '''
 
-with gr.Blocks(css=css) as demo:
+ with gr.Blocks(css=css) as demo:
   state = gr.Variable({
         'selected': -1
   })
