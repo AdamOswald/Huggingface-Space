@@ -6,7 +6,6 @@ colorTo: purple
 sdk: gradio
 sdk_version: 3.8.2
 app_file: app.py
-_file: run.py
 fullWidth: true
 pinned: false
 license: mit
