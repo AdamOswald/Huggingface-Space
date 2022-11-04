@@ -971,9 +971,9 @@ with gr.Blocks(css=css) as demo:
       
       ![Model Views](https://visitor-badge.glitch.me/badge?page_id=Cyberpunk_Anime_Diffusion)
       
-    '''
+    ''')
 
- with gr.Blocks(css=css) as demo:
+with gr.Blocks(css=css) as demo:
   state = gr.Variable({
         'selected': -1
   })
