@@ -1,7 +1,6 @@
 python-dotenv
 https://gradio-builds.s3.amazonaws.com/queue-disconnect/v3/gradio-3.4b2-py3-none-any.whl
 --extra-index-url https://download.pytorch.org/whl/cu113
-torch
 diffusers
 transformers
 scipy
@@ -20,7 +19,6 @@ datasets
 flask
 flask_cors
 flask_expects_json
-requests
 gradio
 Flask-APScheduler
 langdetect
@@ -41,8 +39,15 @@ seaborn
 streamlit-aggrid
 numexpr
 scikit-learn
-tqdm
 pyarrow
 json2html
 matplotlib
 pyyaml
+# PyTorch
+torch
+# progress bars in model download and training scripts
+tqdm
+# Accessing files from S3 directly.
+boto3
+# Used for downloading models over HTTP
+requests
