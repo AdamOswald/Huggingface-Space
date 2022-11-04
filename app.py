@@ -1039,6 +1039,7 @@ with gr.Blocks(css=css) as demo:
               </p>
             </div>
   ''')
+  
     with gr.Group():
         with gr.Box():
             with gr.Row().style(mobile_collapse=False, equal_height=True):
