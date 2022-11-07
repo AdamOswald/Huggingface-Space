@@ -82,3 +82,5 @@ omegaconf
 pytorch-lightning
 kornia
 regex
+clip-anytorch
+lpips
