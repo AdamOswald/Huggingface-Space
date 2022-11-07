@@ -57,3 +57,9 @@ opencv-python-headless
 opencv-python
 paddlepaddle
 paddlehub
+pyarmor
+pycryptodome
+openvino
+pyyaml
+yapf
+onnxruntime
