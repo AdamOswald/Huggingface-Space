@@ -105,3 +105,5 @@ trinart_characters_it4_v1.ckpt filter=lfs diff=lfs merge=lfs -text
 autoencoder_kl-f8-trinart_characters.ckpt filter=lfs diff=lfs merge=lfs -text
 autoencoder_fix_kl-f8-trinart_characters.ckpt filter=lfs diff=lfs merge=lfs -text
 m_ouroboros_style_iteration_1.ckpt filter=lfs diff=lfs merge=lfs -text
+Tardisfusion-v1.ckpt filter=lfs diff=lfs merge=lfs -text
+Tardisfusion-v2.ckpt filter=lfs diff=lfs merge=lfs -text
