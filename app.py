@@ -173,10 +173,17 @@ models = [
      Model("Robo Diffusion", "nousr/robo-diffusion", "robo style"),
      Model("Cyberpunk Anime", "DGSpitzer/Cyberpunk-Anime-Diffusion", "cyberpunk style"),
      Model("Cyberpunk Anime", "flax/Cyberpunk-Anime-Diffusion", "cyberpunk style"),
+     Model("Cyberware", "Eppinette/Cyberware", "cyberware"),
      Model("Tron Legacy", "dallinmackay/Tron-Legacy-diffusion", "trnlgcy"),
      Model("Waifu", "flax/waifu-diffusion", ""),
      Model("Dark Souls", "Guizmus/DarkSoulsDiffusion", "dark souls style"),
      Model("Waifu", "technillogue/waifu-diffusion", ""),
+     Model("Ouroborus", "Eppinette/Ouroboros", "m_ouroboros style"),
+     Model("Ouroborus alt", "Eppinette/Ouroboros", "m_ouroboros"),
+     Model("Mona", "Eppinette/Mona", "Mona"),
+     Model("Mona", "Eppinette/Mona", "Mona Woman"),
+     Model("Waifu", "Eppinette/Mona", ""),
+
 
 ]
 
