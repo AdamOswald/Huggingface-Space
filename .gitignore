@@ -171,3 +171,4 @@ data
 data.db
 data.json
 __pycache__
+gradio_queue.db
