@@ -54,3 +54,4 @@ gdown
 cmake
 onnxruntime-gpu
 opencv-python-headless
+opencv-python
