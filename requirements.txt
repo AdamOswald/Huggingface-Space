@@ -62,3 +62,7 @@ pycryptodome
 openvino
 yapf
 onnxruntime
+imageio
+easydict
+facexlib
+dominate
