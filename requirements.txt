@@ -69,3 +69,4 @@ dominate
 onnx
 scikit-image
 imageio-ffmpeg
+imageio
