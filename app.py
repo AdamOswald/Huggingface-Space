@@ -180,10 +180,16 @@ models = [
      Model("Waifu", "technillogue/waifu-diffusion", ""),
      Model("Ouroborus", "Eppinette/Ouroboros", "m_ouroboros style"),
      Model("Ouroborus alt", "Eppinette/Ouroboros", "m_ouroboros"),
-     Model("Mona", "Eppinette/Mona", "Mona"),
-     Model("Mona", "Eppinette/Mona", "Mona Woman"),
-     Model("Waifu", "Eppinette/Mona", ""),
-
+     Model("Waifu", "Eppinette/Mona", "Mona"),
+     Model("Waifu", "Eppinette/Mona", "Mona Woman"),
+     Model("Space Machine", "rabidgremlin/sd-db-epic-space-machine", "EpicSpaceMachine"),
+     Model("Spacecraft", "rabidgremlin/sd-db-epic-space-machine", "EpicSpaceMachine"),
+     Model("TARDIS", "Guizmus/Tardisfusion", "Classic Tardis style"),
+     Model("TARDIS", "Guizmus/Tardisfusion", "Modern Tardis style"),
+     Model("TARDIS", "Guizmus/Tardisfusion", "Tardis Box style"),
+     Model("Spacecraft", "Guizmus/Tardisfusion", "Classic Tardis style"),
+     Model("Spacecraft", "Guizmus/Tardisfusion", "Modern Tardis style"),
+     Model("Spacecraft", "Guizmus/Tardisfusion", "Tardis Box style"),
 
 ]
 
