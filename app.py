@@ -75,6 +75,7 @@ from diffusers import DiffusionPipeline
 from share_btn import community_icon_html, loading_icon_html, share_js
 
 pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
+pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
 
 subprocess.run(["make", "build-all"], shell=False)
 img_to_text = gr.Blocks.load(name="spaces/pharma/CLIP-Interrogator")
@@ -164,10 +165,11 @@ models = [
      Model("Modern Disney", "nitrosocke/modern-disney-diffusion", "modern disney style"),
      Model("Classic Disney", "nitrosocke/classic-anim-diffusion", "classic disney style"),
      Model("Waifu", "hakurei/waifu-diffusion", ""),
-     Model("Pokémon", "lambdalabs/sd-pokemon-diffusers", ""),
-     Model("Pony Diffusion", "AstraliteHeart/pony-diffusion", ""),
-     Model("Robo Diffusion", "nousr/robo-diffusion", ""),
-     Model("Cyberpunk Anime", "DGSpitzer/Cyberpunk-Anime-Diffusion", "dgs illustration style"),
+     Model("Pokémon", "lambdalabs/sd-pokemon-diffusers", "pokemon style"),
+     Model("Pony Diffusion", "AstraliteHeart/pony-diffusion", "pony style"),
+     Model("Robo Diffusion", "nousr/robo-diffusion", "robo style"),
+     Model("Cyberpunk Anime", "DGSpitzer/Cyberpunk-Anime-Diffusion", "cyberpunk style"),
+     Model("Cyberpunk Anime", "flax/Cyberpunk-Anime-Diffusion", "cyberpunk style"),
      Model("Tron Legacy", "dallinmackay/Tron-Legacy-diffusion", "trnlgcy"),
      Model("Waifu", "flax/waifu-diffusion", ""),
      Model("Dark Souls", "Guizmus/DarkSoulsDiffusion", "dark souls style"),
@@ -205,6 +207,7 @@ gpt2_pipe = pipeline('text-generation', model='Gustavosta/MagicPrompt-Stable-Dif
 pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=True, revision="fp16", torch_dtype=torch.float16).to("cuda")
 pipe = StableDiffusionPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
 pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
+pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
 # pipe_i2i = StableDiffusionImg2ImgPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
 
 with open("ideas.txt", "r") as f:
