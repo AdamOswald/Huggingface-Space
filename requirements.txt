@@ -66,3 +66,6 @@ imageio
 easydict
 facexlib
 dominate
+onnx
+scikit-image
+imageio-ffmpeg
