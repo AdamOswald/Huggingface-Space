@@ -76,6 +76,8 @@ from share_btn import community_icon_html, loading_icon_html, share_js
 
 pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
+pipeline = DiffusionPipeline.from_pretrained("technillogue/waifu-diffusion")
+pipeline = DiffusionPipeline.from_pretrained("svjack/Stable-Diffusion-Pokemon-en")
 
 subprocess.run(["make", "build-all"], shell=False)
 img_to_text = gr.Blocks.load(name="spaces/pharma/CLIP-Interrogator")
@@ -166,6 +168,7 @@ models = [
      Model("Classic Disney", "nitrosocke/classic-anim-diffusion", "classic disney style"),
      Model("Waifu", "hakurei/waifu-diffusion", ""),
      Model("Pokémon", "lambdalabs/sd-pokemon-diffusers", "pokemon style"),
+     Model("Pokémon", "svjack/Stable-Diffusion-Pokemon-en", "pokemon style"),
      Model("Pony Diffusion", "AstraliteHeart/pony-diffusion", "pony style"),
      Model("Robo Diffusion", "nousr/robo-diffusion", "robo style"),
      Model("Cyberpunk Anime", "DGSpitzer/Cyberpunk-Anime-Diffusion", "cyberpunk style"),
@@ -173,7 +176,8 @@ models = [
      Model("Tron Legacy", "dallinmackay/Tron-Legacy-diffusion", "trnlgcy"),
      Model("Waifu", "flax/waifu-diffusion", ""),
      Model("Dark Souls", "Guizmus/DarkSoulsDiffusion", "dark souls style"),
-     
+     Model("Waifu", "technillogue/waifu-diffusion", ""),
+
 ]
 
 last_mode = "txt2img"
@@ -208,6 +212,8 @@ pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", 
 pipe = StableDiffusionPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
 pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
+pipeline = DiffusionPipeline.from_pretrained("technillogue/waifu-diffusion")
+pipeline = DiffusionPipeline.from_pretrained("svjack/Stable-Diffusion-Pokemon-en")
 # pipe_i2i = StableDiffusionImg2ImgPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
 
 with open("ideas.txt", "r") as f:
