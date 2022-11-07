@@ -60,6 +60,5 @@ paddlehub
 pyarmor
 pycryptodome
 openvino
-pyyaml
 yapf
 onnxruntime
