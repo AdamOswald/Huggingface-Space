@@ -33,6 +33,7 @@ import yaml
 import textwrap
 import tornado
 import time
+import cv2 as cv
 from torch import autocast
 from diffusers import StableDiffusionPipeline
 from transformers import pipeline, set_seed
