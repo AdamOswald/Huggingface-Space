@@ -84,3 +84,6 @@ kornia
 regex
 clip-anytorch
 lpips
+dlib
+gdown
+git+https://github.com/openai/CLIP.git
