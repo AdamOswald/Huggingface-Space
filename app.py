@@ -190,6 +190,12 @@ models = [
      Model("Spacecraft", "Guizmus/Tardisfusion", "Classic Tardis style"),
      Model("Spacecraft", "Guizmus/Tardisfusion", "Modern Tardis style"),
      Model("Spacecraft", "Guizmus/Tardisfusion", "Tardis Box style"),
+     Model("CLIP", "EleutherAI/clip-guided-diffusion", "CLIP"),
+     Model("Face Swap", "felixrosberg/face-swap", "faceswap"),
+     Model("Face Swap", "felixrosberg/face-swap", "faceswap with"),
+     Model("Face Swap", "felixrosberg/face-swap", "faceswapped"),
+     Model("Face Swap", "felixrosberg/face-swap", "faceswapped with"),
+     Model("Face Swap", "felixrosberg/face-swap", "face on"),     
 
 ]
 
