@@ -170,3 +170,4 @@ flagged/
 data
 data.db
 data.json
+__pycache__
