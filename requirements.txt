@@ -50,3 +50,7 @@ requests
 tensorflow
 tensorflow-hub
 libsixel-python
+gdown
+cmake
+onnxruntime-gpu
+opencv-python-headless
