@@ -65,6 +65,7 @@ from utils import streamlit_utils as st_utils
 from dataclasses import asdict
 from .transfer import transfer_color
 from .utils import convert_bytes_to_pil
+from diffusers import DiffusionPipeline
 #from torch import autocast
 #from diffusers import StableDiffusionPipeline
 #from io import BytesIO
@@ -72,6 +73,8 @@ from .utils import convert_bytes_to_pil
 #import torch
 
 from share_btn import community_icon_html, loading_icon_html, share_js
+
+pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 
 subprocess.run(["make", "build-all"], shell=False)
 img_to_text = gr.Blocks.load(name="spaces/pharma/CLIP-Interrogator")
@@ -198,6 +201,7 @@ pipe = StableDiffusionPipeline.from_pretrained(current_model, torch_dtype=torchf
 gpt2_pipe = pipeline('text-generation', model='Gustavosta/MagicPrompt-Stable-Diffusion', tokenizer='gpt2')
 pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=True, revision="fp16", torch_dtype=torch.float16).to("cuda")
 pipe = StableDiffusionPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
+pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 # pipe_i2i = StableDiffusionImg2ImgPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
 
 with open("ideas.txt", "r") as f:
