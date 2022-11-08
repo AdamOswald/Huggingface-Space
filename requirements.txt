@@ -87,3 +87,5 @@ dlib
 gdown
 git+https://github.com/openai/CLIP.git
 wheel
+pip
+pipenv
