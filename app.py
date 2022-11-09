@@ -79,6 +79,7 @@ pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
 pipeline = DiffusionPipeline.from_pretrained("technillogue/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("svjack/Stable-Diffusion-Pokemon-en")
+pipeline = DiffusionPipeline.from_pretrained("AdamOswald1/IDK")
 
 stable_inversion = "user/my-stable-inversion" #@param {type:"string"}
 inversion_path = hf_hub_download(repo_id=stable_inversion, filename="token_embeddings.pt")
@@ -296,6 +297,7 @@ models = [
      Model("Waifu", "hakurei/waifu-diffusion, flax/waifu-diffusion, technillogue/waifu-diffusion", ""),
      Model("Pokémon", "lambdalabs/sd-pokemon-diffusers, svjack/Stable-Diffusion-Pokemon-en", "pokemon style"),
      Model("Pokémon", "lambdalabs/sd-pokemon-diffusers, svjack/Stable-Diffusion-Pokemon-en", ""),
+     Model("Test", "AdamoOswald1/IDK", ""),
 
 ]
 
@@ -333,6 +335,7 @@ pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
 pipeline = DiffusionPipeline.from_pretrained("technillogue/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("svjack/Stable-Diffusion-Pokemon-en")
+pipeline = DiffusionPipeline.from_pretrained("AdamOswald1/IDK")
 # pipe_i2i = StableDiffusionImg2ImgPipeline.from_pretrained(current_model.path, torch_dtype=torch.float16)
 
 with open("ideas.txt", "r") as f:
