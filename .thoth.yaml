@@ -18,19 +18,19 @@ managers:
       enabled: true
   - name: label-bot
     configuration:
-      enabled: true
+      enabled: false
   - name: pipfile-requirements
     configuration:
-      enabled: true
+      enabled: false
   - name: thoth-advise
     configuration:
-      enabled: true
+      enabled: false
   - name: thoth-provenance
     configuration:
-      enabled: true
+      enabled: false
   - name: update
     configuration:
-      enabled: true
+      enabled: false
   - name: version
     configuration:
-      enabled: true
+      enabled: false
