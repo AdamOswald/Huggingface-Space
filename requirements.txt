@@ -15,7 +15,7 @@ torchvision
 fairscale
 Pillow
 timm
--e git+https://github.com/openai/CLIP.git
+-e git+https://github.com/openai/CLIP.git@main#egg=clip
 -e git+https://github.com/pharmapsychotic/BLIP.git@main#egg=blip
 datasets
 flask
@@ -85,7 +85,6 @@ clip-anytorch
 lpips
 dlib
 gdown
-git+https://github.com/openai/CLIP.git
 wheel
 pip
 pipenv
