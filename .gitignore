@@ -1386,3 +1386,8 @@ install-log.txt
 build
 node_modules
 .env
+
+.idea/*
+
+!.idea/codeStyles
+!.idea/runConfigurations
