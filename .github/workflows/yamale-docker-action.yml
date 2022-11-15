@@ -1,0 +1,59 @@
+- name: python-yamale
+  uses: eXpire163/yamale-docker-action@v3.1
+
+on: [push]
+
+jobs:
+  schema_validation_job:
+    runs-on: ubuntu-latest
+    name: Schame validation
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: test a single file
+        id: single
+        uses: eXpire163/yamale-docker-action@main
+        with:
+          schema-file: "schema.yml"
+          test-file: "action.yml"
+          strict: "nonstrict"
+      - name: or test a folder
+        id: folder
+        uses: eXpire163/yamale-docker-action@main
+        with:
+          schema-file: "schema.yml"
+          test-file: "testfiles"
+          strict: "strict"
+
+      - name: Get the output time
+        run: echo "The time was ${{ steps.single.outputs.time }}"
+
+name: "python-yamale"
+description: "A schema and validator for YAML."
+branding:
+  icon: arrow-left
+  color: purple
+inputs:
+  schema-file:
+    default: "schema.yml"
+    description: "schema files used for validation"
+    required: true
+  test-file:
+    default: "action.yml"
+    required: true
+    description: "yaml file that needs to be validated"
+  strict:
+    default: "strict"
+    required: false
+    description: "strict|nonstrict validation is requred"
+
+outputs:
+  time: # id of output
+    description: "The time of validation"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.schema-file }}
+    - ${{ inputs.test-file }}
+    - ${{ inputs.strict}}
