@@ -67,6 +67,8 @@ from dataclasses import asdict
 from .transfer import transfer_color
 from .utils import convert_bytes_to_pil
 from diffusers import DiffusionPipeline
+from huggingface_hub.inference_api import InferenceApi
+from huggingface_hub import login
 #from torch import autocast
 #from diffusers import StableDiffusionPipeline
 #from io import BytesIO
@@ -74,6 +76,12 @@ from diffusers import DiffusionPipeline
 #import torch
 
 from share_btn import community_icon_html, loading_icon_html, share_js
+
+from huggingface_hub import login
+login()
+
+from huggingface_hub.inference_api import InferenceApi
+inference = InferenceApi(repo_id="bert-base-uncased", token=API_TOKEN)
 
 pipeline = DiffusionPipeline.from_pretrained("flax/waifu-diffusion")
 pipeline = DiffusionPipeline.from_pretrained("flax/Cyberpunk-Anime-Diffusion")
