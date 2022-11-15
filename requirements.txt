@@ -88,3 +88,23 @@ wheel
 pip
 pipenv
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+MarkupSafe
+tokenizers
+numpy
+regex
+grpcio
+tensorboard==1.15.0
+tensorboard>=1.15.0
+pyarrow
+pandas
+tensorboard
+igraph
+pyzmq
+visualdl
+opencv-python
+paddlenlp
+paddle2onnx
+dill>=0.3.6
+dill==0.3.6
+dill
+aiohttp
