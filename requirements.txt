@@ -30,7 +30,7 @@ tokenizers
 sentencepiece
 streamlit
 powerlaw
-numpy
+numpy==^1.22.0
 pandas
 dataclasses
 iso639
@@ -71,7 +71,6 @@ dominate
 onnx
 scikit-image
 imageio-ffmpeg
-imageio
 ipython  
 psutil  
 thop
