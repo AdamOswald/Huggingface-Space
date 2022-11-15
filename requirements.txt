@@ -88,6 +88,7 @@ wheel
 pip
 pipenv
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools
 MarkupSafe
 tokenizers
 numpy
@@ -108,3 +109,9 @@ dill>=0.3.6
 dill==0.3.6
 dill
 aiohttp
+scikit-learn
+scipy
+paddlefsl
+jedi
+filterpy
+numba
