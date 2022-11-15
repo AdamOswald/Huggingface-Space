@@ -30,7 +30,7 @@ tokenizers
 sentencepiece
 streamlit
 powerlaw
-numpy==^1.22.0
+numpy==1.22.0
 pandas
 dataclasses
 iso639
