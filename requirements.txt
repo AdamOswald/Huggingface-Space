@@ -30,7 +30,7 @@ tokenizers
 sentencepiece
 streamlit
 powerlaw
-numpy==1.22.0
+numpy
 pandas
 dataclasses
 iso639
@@ -87,14 +87,12 @@ gdown
 wheel
 pip
 pipenv
-setuptools>=65.5.1
+setuptools
 MarkupSafe
 tokenizers
 numpy
 regex
 grpcio
-tensorboard==1.15.0
-tensorboard>=1.15.0
 pyarrow
 pandas
 tensorboard
@@ -104,8 +102,6 @@ visualdl
 opencv-python
 paddlenlp
 paddle2onnx
-dill>=0.3.6
-dill==0.3.6
 dill
 aiohttp
 scikit-learn
