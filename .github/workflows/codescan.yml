@@ -18,7 +18,7 @@ on:
     - cron: '20 18 * * 1'
 
 permissions:
-  contents: read
+  contents: read and write
 
 jobs:
     CodeScan:

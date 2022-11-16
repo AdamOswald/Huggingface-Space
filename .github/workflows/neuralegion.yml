@@ -155,7 +155,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '27 22 * * 6'
+    - cron: '44 1 * * 0'
 
 jobs:
   neuralegion_scan:
