@@ -7,9 +7,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
+        uses: snyk/actions/node@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
           
@@ -19,9 +19,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
+        uses: snyk/actions/node@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
         with:
@@ -33,8 +33,8 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: snyk/actions/setup@master
+      - uses: actions/checkout@main
+      - uses: snyk/actions/setup@main
       - uses: actions/setup-go@v1
         with:
           go-version: '1.13'
@@ -52,9 +52,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/dotnet@master
+        uses: snyk/actions/dotnet@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
           
@@ -64,9 +64,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/golang@master
+        uses: snyk/actions/golang@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
           
@@ -76,9 +76,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/php@master
+        uses: snyk/actions/php@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
    
@@ -88,9 +88,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/python-3.8@master
+        uses: snyk/actions/python-3.8@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
  
@@ -100,9 +100,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/python@master
+        uses: snyk/actions/python@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
 
@@ -112,9 +112,9 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/scala@master
+        uses: snyk/actions/scala@main
         env:
           SNYK_TOKEN: ${{9e3520d8-acb1-4037-a2e9-fff7301b7655}}
           
