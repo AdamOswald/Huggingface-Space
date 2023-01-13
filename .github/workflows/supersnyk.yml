@@ -1,5 +1,5 @@
 - name: SuperSnyk 🦸
-  uses: mishabruml/supersnyk@v1.1.2
+  uses: mishabruml/supersnyk@v1.1.3
 
 on:
   push:
