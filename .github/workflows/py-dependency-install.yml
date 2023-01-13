@@ -5,7 +5,7 @@
   uses: vednig/pyinstaller-action-windows@v0.1.5
 
 - name: Setup Python
-  uses: actions/setup-python@v4.3.0
+  uses: actions/setup-python@v4.5.0
 
 steps:
   # this Action should follow steps to set up Python build environment
