@@ -1,5 +1,5 @@
 - name: python-yamale
-  uses: eXpire163/yamale-docker-action@v3.1
+  uses: eXpire163/yamale-docker-action@v3.2
 
 on: [push]
 
