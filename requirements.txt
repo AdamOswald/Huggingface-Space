@@ -71,12 +71,12 @@ dominate
 onnx
 scikit-image
 imageio-ffmpeg
-ipython  
-psutil  
+ipython
+psutil
 thop
 tensorboard
 einops
-omegaconf 
+omegaconf
 pytorch-lightning
 kornia
 regex
