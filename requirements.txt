@@ -110,3 +110,4 @@ paddlefsl
 jedi
 filterpy
 numba
+sympy>=1.12 # not directly required, pinned by Snyk to avoid a vulnerability
