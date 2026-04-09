@@ -1,5 +1,5 @@
 - name: Python Dependency Installation
-  uses: py-actions/py-dependency-install@v4.0.0
+  uses: py-actions/py-dependency-install@v4.1.0
 
 - name: Python Build for Windows(PyInstaller)
   uses: vednig/pyinstaller-action-windows@v0.1.5
