@@ -249,7 +249,7 @@ runs:
         workdir: ${{ inputs.root }}/${{ inputs.workdir }}
 
     - if: ${{ inputs.pylint == 'true' }}
-      uses: dciborow/action-pylint@0.0.7
+      uses: dciborow/action-pylint@0.1.1
       with:
         github_token: ${{ inputs.github_token }}
         workdir: ${{ inputs.root }}/${{ inputs.workdir }}
