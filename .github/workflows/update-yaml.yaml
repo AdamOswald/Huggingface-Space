@@ -23,7 +23,7 @@ runs:
     - 
       uses: actions/setup-python@v4
       with: 
-        python-version: "3.9"
+        python-version: "3.14"
     - 
       run: "python ${{ github.action_path }}/update-yaml.py -i ${{ inputs.infile }} -V \"${{ inputs.varlist }}\" > ${{ github.action_path }}/.update-yaml.tmp"
       shell: bash
