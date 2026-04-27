@@ -1,5 +1,5 @@
 - name: Snyk
-  uses: snyk/actions@0.3.0
+  uses: snyk/actions@v0.5.0
 
 name: Example workflow using Snyk
 on: push
